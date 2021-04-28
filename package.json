@@ -49,12 +49,12 @@
     "prettier": "2.2.1",
     "pretty-quick": "^3.1.0"
   },
-  "lint-staged": {
-    "*.{js,css,md,tsx}": "prettier --write"
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,css,md, tsx}": "prettier --write"
   }
 }
